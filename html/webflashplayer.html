@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<body>
+<h3>网页中嵌入Flash Player播放器</h3>
+<!-- 此例程由Dreamweaver形成的代码修改而成 -->
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="fpid" width="322" height="322" title="SWF多媒体播放示例">
+  <param name="movie" value="mmedia/clock3.swf">
+  <!-- 下一个对象标签用于非IE浏览器。所以使用IECC将其从IE隐藏。 --> 
+  <!--[if !IE]>-->
+  <object type="application/x-shockwave-flash" data="mmedia/clock3.swf" width="322" height="322">
+    <!--<![endif]-->
+    <param name="quality" value="high">
+    <param name="wmode" value="opaque">
+    <param name="swfversion" value="6.0.65.0">
+    <!-- 此 param 标签提示使用Flash Player 6.0 r65和更高版本的用户下载最新版本的Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
+    <param name="expressinstall" value="Scripts/expressInstall.swf">
+    <!-- 浏览器将以下替代内容显示给使用Flash Player 6.0和更低版本的用户。 -->
+    <div>
+      <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
+      <p><a href="http://www.adobe.com/go/getflashplayer"> <img width="112" height="33" alt="获取 Adobe Flash Player" src=
+"http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"/> </a></p>
+    </div>
+    <!--[if !IE]>-->
+  </object>
+  <!--<![endif]-->
+</object>
+<p> <a href="webflashplayer.html">FlashPlayer</a> &nbsp; <a href="webmediaplayer.html">MediaPlayer</a> &nbsp; <a href="webrealoneplayer.html">RealOnePlayer</a> &nbsp; <a href="webquicktimeplayer.html">QuickTime</a> </p>
+</body>
+</html>

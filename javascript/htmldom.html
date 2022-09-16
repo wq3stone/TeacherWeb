@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML DOM</title>
+<style type="text/css">
+/* 定义改变背景色的CSS，表示被选中的项 */
+.selected {
+	background-color: #66f;
+}
+</style>
+</head>
+<body>
+<h3>根据节点关系访问HTML元素</h3>
+<ol id="books">
+  <li id="html">超文本标记语言 HTML</li>
+  <li id="css">层叠样式表 CSS</li>
+  <li id="js" class="selected">JavaScript脚本语言</li>
+  <li id="xml">可扩展标记语言 XML</li>
+  <li id="xhtml">XML超文本标记语言 XHTML</li>
+  <li id="dw">Web编辑工具 Dreamweaver</li>
+  <li id="html5">超文本标记语言版本5 HTML5</li>
+  <li id="csse">层叠样式表版本3 CSS3</li>
+</ol>
+<input type="button" value="父节点"
+		onclick="change(curTarget.parentNode);"/>
+<input type="button" value="第一个"
+		onclick="change(curTarget.parentNode.firstChild.nextSibling);"/>
+<input type="button" value="上一个"
+		onclick="change(curTarget.previousSibling.previousSibling);"/>
+<input type="button" value="下一个"
+		onclick="change(curTarget.nextSibling.nextSibling);"/>
+<input type="button" value="最后一个"
+		onclick="change(curTarget.parentNode.lastChild.previousSibling);"/>
+<script type="text/javascript">
+	var curTarget = document.getElementById("js");
+	function change(target) {
+		alert(target.innerHTML);
+	}
+</script>
+</body>
+</html>

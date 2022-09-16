@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>函数的参数</title>
+</head>
+<body>
+<script type="text/javascript">
+	function fnchparam(param1) {
+		//对参数值赋值，对实参不会有任何影响
+		param1 = 20;
+		document.write("函数执行中param1的值为：" + param1 + "<br/>");
+	}
+	var x = "abc";
+	// 输出函数调用之前x的值
+	document.write("函数调用之前x的值为：" + x + "<br />");
+	fnchparam(x);	// 输出函数内部修改后的参数值
+	// 输出函数调用后前x的值
+	document.write("函数调用之后x的值为：" + x + "<br />");
+</script>
+<p> <a href="funparamtrans.html">基本类型参数</a> &nbsp;&nbsp; <a href="funparamtrans2.html">复合类型参数</a></p>
+</body>
+</html>

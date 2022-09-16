@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>伪元素选择器</title>
+<style type="text/css">
+body {
+	text-indent:2em;
+	margin:8px;
+}
+div {
+	width:432px; height:110px;
+	border:1px dashed black;
+	margin:4px; padding:8px;
+	line-height:1.6em;
+}
+div:first-letter {
+	font-size:2.5em;
+	color:blue;
+}
+div:first-line {
+	font-family:楷体;
+	color:#F0A;
+	background-color:#EDEDED; 
+}
+</style>
+</head>
+<body>
+<h3>伪元素选择器应用</h3>
+<div>伪元素选择器可以定位元素的第一个字符、第一行，对这些部分单独进行格式设置。还可以定位元素前后的位置，在这些位置使用内容生成样式属性，添加内容，同时对其样式进行设置。</div>
+<p> <a href="pseudo-lang.html">lang伪类</a> &nbsp; <a href="pseudo-element.html">伪元素</a></p>
+</body>
+</html>

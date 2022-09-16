@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>绘制矩形</title>
+</head>
+<body>
+<h3> 绘制矩形 </h3>
+<canvas id="rect" width="480" height="230" style="border:1px solid black"> </canvas>
+<script type="text/javascript">
+	var canvas = document.getElementById('rect');// 获取canvas元素对应的DOM对象
+	var crc2D = canvas.getContext('2d');// 获取CanvasRenderingContext2D对象
+	crc2D.fillStyle = '#D3E2F5';// 设置填充颜色
+	crc2D.fillRect(10 ,10 , 120 , 60);// 填充一个矩形
+	crc2D.fillStyle = '#A8C6ED';// 设置填充颜色
+	crc2D.fillRect(80 ,40 , 120 , 60);// 填充一个矩形
+	crc2D.strokeRect(220 , 20 , 120 , 60);// 绘制一个矩形边框
+	crc2D.strokeStyle = "#00f";// 设置线条颜色
+	crc2D.strokeRect(280 ,40 , 120 , 60);// 绘制一个矩形边框
+	crc2D.strokeStyle = "#0ff";// 设置线条颜色
+	crc2D.lineWidth=10;// 设置线条宽度
+	crc2D.lineJoin = "round";////设置线条交汇时边角为圆角
+	crc2D.strokeRect(30 ,120 , 120 , 60);// 绘制一个矩形边框
+	crc2D.strokeStyle = "#f0f";// 设置线条颜色
+	crc2D.lineJoin = "bevel";// //设置线条交汇时边角为斜角
+	crc2D.strokeRect(120 , 150 , 120 , 60);// 绘制一个矩形边框
+	crc2D.strokeStyle = "#00f";// 设置线条颜色
+	crc2D.lineJoin = "miter";// //设置线条交汇时边角为尖角
+	crc2D.strokeRect(220 , 130 , 120 , 60);// 绘制一个矩形边框
+</script>
+</body>
+</html>

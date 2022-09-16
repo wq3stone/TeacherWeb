@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="gb2312"?>
+<students>
+  <student>
+    <sn>20040112</sn>
+    <name>张三</name>
+    <sex>男</sex>
+    <nation>汉族</nation>
+    <address>山东临沂</address>
+    <profession>英语</profession>
+  </student>
+  <student>
+    <sn>20040201</sn>
+    <name>李四</name>
+    <sex>女</sex>
+    <nation>白族</nation>
+    <address>云南大理</address>
+    <profession>中文</profession>
+  </student>
+  <student>
+    <sn>20031514</sn>
+    <name>王五</name>
+    <sex>女</sex>
+    <nation>汉族</nation>
+    <address>河南郑州</address>
+    <profession>计算机</profession>
+  </student>
+  <student>
+    <sn>20031514</sn>
+    <name>赵六</name>
+    <sex>女</sex>
+    <nation>汉族</nation>
+    <address>山东济南</address>
+    <profession>计算机</profession>
+  </student>
+</students>

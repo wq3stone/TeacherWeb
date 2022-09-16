@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>运算符</title>
+</head>
+<body>
+<h3>位运算符</h3>
+<script type="text/ecmascript">
+  document.write("~8 = " + ~8 + "<br/>");  //结果为-9
+   document.write("8 << 2 = " + (8<<2) + "<br/>");  //结果为32
+  var vnum=8; vnum <<= 2
+  document.write("vnum <<= 2; vnum = " + vnum + "<br/>");
+  document.write("-8 << 2 = " + (-8<<2) + "<br/>");  //结果为-32
+  var vnum=-8; vnum <<=2
+  document.write("vnum <<= 2; vnum = " + vnum + "<br/>");
+  document.write("-2^31 << 1 = " + (-2147483648<<1) + "<br/>");  //溢出
+  document.write("(-2^30 + 1) << 1 = " + (-1073741825<<1) + "<br/>");  //溢出 
+  document.write("-8 >> 2 = " + (-8>>2) + "<br/>");  //结果为-2
+  var vnum=-8; vnum >>= 2
+  document.write("vnum >>= 2; vnum = " + vnum + "<br/>"); 
+  document.write("-8 >>> 2 = " + (-8>>>2) + "<br/>");  //结果为1073741824
+  var vnum=-8; vnum >>>= 2
+  document.write("vnum >>>= 2; vnum = " + vnum + "<br/>");  
+</script>
+<p> <a href="logicop.html">逻辑运算符</a> &nbsp; <a href="bitop.html">位运算符</a> &nbsp; <a href="condop.html">条件运算符</a> &nbsp; <a href="instanceof.html">instanceof运算符</a></p>
+</body>
+</html>

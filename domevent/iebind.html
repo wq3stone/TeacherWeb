@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM Event</title>
+<style type="text/css">
+#outdiv {
+	width:240px;
+	height:160px;
+	background-color:#D3E2F5;
+	margin:20px;
+	padding:16px;
+}
+#inndiv {
+	width:140px;
+	height:60px;
+	background-color:#A8C6ED;
+	margin:16px;
+	padding:16px;
+}	
+</style>
+<script type="text/javascript">
+	var handler1=function() {
+		alert(event.srcElement.id + "的" + event.type + "事件！");	
+	}
+	var handler2=function() {
+		alert(this + "的事件监听器程序！");	//this是全局对象window	
+	}
+</script>
+</head>
+<body id="pagebd">
+<div id="outdiv">
+	<p>外层div</p>
+	<div id="inndiv">内嵌的div</div>
+</div>
+<script type="text/javascript">
+	//console.log("Here is OK!");
+	document.getElementById("pagebd").attachEvent("onclick",handler1);
+	document.getElementById("outdiv").attachEvent("onclick",handler1);
+	document.getElementById("inndiv").attachEvent("onclick",handler1);
+	document.getElementById("pagebd").attachEvent("onclick",handler2);
+	document.getElementById("outdiv").attachEvent("onclick",handler2);
+	document.getElementById("inndiv").attachEvent("onclick",handler2);
+</script>
+</body>
+</html>

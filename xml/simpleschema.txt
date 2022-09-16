@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="studentlist">
+<xsd:complexType>
+  <xsd:element name="student" minOccurs="0" maxOccurs="unbounded">
+  <xsd:sequence>
+    <xsd:element name="sn" type="xsd:Long"/>
+    <xsd:element name="name" type="xsd:token"/>
+    <xsd:element name="gender" type="xsd:token"/>
+    <xsd:element name="nation" type="xsd:token"/>
+    <xsd:element name="address" type="xsd:token"/>
+    <xsd:element name="proffession" type="xsd:token"/>
+  </xsd:sequence>
+  </xsd:element>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>

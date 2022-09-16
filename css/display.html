@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>显示类型</title>
+<style type="text/css">
+.inlinebox {
+	display: inline-block;	
+	margin: 4px; padding: 4px;
+	height: 40px; width: 320px;
+	border: 1px dashed #D40055;
+	background-color: #CFF;
+}
+.inlinetb {
+	display:inline-table;
+	width:220px;	
+}
+</style>
+</head>
+<body>
+<h2>网页元素的显示方式</h2>
+<h3>inline-block元素</h3>
+普通文本。<span class="inlinebox">设置为inline-block元素的文本。</span>普通文本。普通文本。普通文本。普通文本。普通文本。普通文本。普通文本。普通文本。普通文本。普通文本。普通文本。普通文本。普通文本。普通文本。普通文本。普通文本。<br />
+inline-block元素可以设置宽度、高度、垂直方向的margin和padding属性<br />也将起作用，与高度一起影响行高。
+<h3>inline-block表格</h3>
+<table class="inlinetb" border="1" cellspacing="1">
+  <caption>并列的表格一</caption>
+  <tr>
+    <td>inline</td> <td>block</td> <td>table</td>
+  </tr>
+  <tr>
+    <td>具有</td> <td>表格</td> <td>功能</td>
+  </tr>
+</table>
+<table class="inlinetb" border="1" cellspacing="1">
+  <caption>并列的表格二</caption>
+  <tr>
+    <td>特殊</td> <td>的</td> <td>表格</td>
+  </tr>
+  <tr>
+    <td>可以</td> <td>并列</td> <td>显示</td>
+  </tr>
+</table>
+</body>
+</html>

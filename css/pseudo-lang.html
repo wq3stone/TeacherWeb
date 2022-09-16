@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>lang伪类选择器</title>
+<style type="text/css">
+div {
+	width:432px; height:100px;
+	border:1px dashed black;
+	margin:4px; padding:8px;
+	line-height:1.6em;
+}
+span:lang(en) {
+	font-family:"Times New Roman", Times, serif;
+	color:#F0A;
+	background-color:#EDEDED; 
+}
+</style>
+</head>
+<body>
+<h3>lang伪类选择器应用</h3>
+<div>:lang伪类使你有能力为不同的语言定义特殊的规则。<span lang="en">This an English text example.</span>selector:lang(“en”)用于选取lang属性值以“en”开头的元素。lang属性为HTML标记的通用属性之一，用于指定文本所属的语言。</div>
+<p> <a href="pseudo-lang.html">lang伪类</a> &nbsp; <a href="pseudo-element.html">伪元素</a></p>
+</body>
+</html>

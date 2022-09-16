@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>函数的参数</title>
+</head>
+<body>
+<script type="text/javascript">
+	function Person(age) {
+		this.age=age;
+	}
+	var p1=new Person(20);
+	// 定义函数changeAge,函数需要一个参数
+	var changeAge=function(person, age) {
+		// 首先要求person必须是对象，而且person的age属性为number
+		if (!(typeof person == 'object') || !(typeof person.age == 'number')) {
+			// 第一个参数的类型不符合要求，输出提示信息，并返回
+			document.writeln("第一个参数不是Person类型！" + "<br />");
+			return;
+		}
+		// 判断第二个参数的类型
+		if(typeof age == 'number') {
+			//第二个参数也满足要求，执行函数所需的逻辑操作
+			document.write("函数执行前person的Age值为：" + person.age + "<br />");
+			person.age = age;
+			document.write("函数执行中person的Age值为：" + person.age + "<br />");
+		}
+		else {
+			document.writeln("第二个参数的类型不为整数！" + "<br />");
+		}
+	}
+	// 分别采用不同方式调用函数
+	changeAge();
+	changeAge(p1,"hello");	
+	changeAge(p1,35);
+</script>
+</body>
+</html>

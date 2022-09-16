@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>多级编号</title>
+<style type="text/css">
+.container {
+	width: 400px;
+	margin: 16px 8px; padding: 8px;
+	border: 1px dashed blue;
+	counter-reset:lev1 2;
+}
+.level1 {
+	font-size:14pt;
+	line-height: 1.6;
+	margin-left: 16px;
+	counter-reset:lev2;
+}
+.level1:before {
+	counter-increment:lev1;
+	content: counter(lev1) " ";
+}
+.level2 {
+	font-size:12pt;
+	line-height: 1.4;
+	margin-left: 40px;
+	counter-reset:lev3;
+}
+.level2:before {
+	counter-increment:lev2;
+	content: counter(lev1) "." counter(lev2) " ";
+}
+.level3 {
+	font-size:12pt;
+	line-height: 1.4;
+	margin-left: 72px;
+}
+.level3:before {
+	counter-increment:lev3;
+	content: counter(lev1) "." counter(lev2) "." counter(lev3) " ";
+}
+</style>
+</head>
+<body>
+<h3>多级编号</h3>
+<div class="container">
+  <div class="level1">面向对象的技术</div>
+  <div class="level1">Web技术</div>
+    <div class="level2">HTML</div>
+    <div class="level2">CSS</div>
+      <div class="level3">样式属性</div>
+      <div class="level3">选择器</div>
+      <div class="level3">网页中的样式表</div>
+    <div class="level2">JavaScript</div>
+    <div class="level2">XML</div>
+  <div class="level1">数据库技术</div>
+</div>
+<p> <a href="content.html">插入内容</a> &nbsp; <a href="quotes.html">插入引号</a> &nbsp; <a href="counter-increment.html">多级编号</a></p>
+</body>
+</html>

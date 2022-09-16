@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>函数</title>
+<script type="text/javascript">
+function arrproc(arr, fnproc) { //函数作为参数
+	for(var index in arr) {
+		// index、array[index]是传给fn函数的参数
+		fnproc(index, arr[index]); //调用参数函数
+	}
+}
+</script>
+</head>
+<body>
+<h3>函数作为参数</h3>
+<script language="javascript">
+  // 调用arrproc函数，第一个参数是数组，第二个参数是函数
+  arrproc(["Hello", 68, true] , function(index , ele) { //匿名函数定义
+	  document.write("第" + index + "个元素是：" + ele + "<br />");
+  });
+</script>
+<p> <a href="funapply1.html">函数示例1</a> &nbsp;&nbsp; <a href="funapply2.html">函数示例2</a></p>
+</body>
+</html>

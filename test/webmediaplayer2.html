@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<body>
+<h3>网页中嵌入Media Player播放器</h3>
+  <object classid="clsid:05589FA1-C356-11CE-BF01-00AA0055595A" id="mpid" width="340"  height="320" > 
+  <param name="filename" value="mmedia/movie.mp4"> 
+  <!—必需的参数，播放的媒体文件地址-->
+  <param name="AutoStart" value="-1"> 
+  <!--是否自动播放，值-1表示true，0表示false，下同--> 
+  <param name="Balance" value="0"> 
+  <!--调整左右声道平衡，最左-9640，最右9640--> 
+  <param name="enabled" value="-1"> 
+  <!--播放器是否可人为控制--> 
+  <param name="EnableContextMenu" value="-1"> 
+  <!--是否启用上下文菜单--> 
+  <param name="PlayCount" value="1"> 
+  <!--播放次数控制，为整数--> 
+  <param name="rate" value="1"> 
+  <!--播放速率控制，1为正常，允许小数，1.0-2.0--> 
+  <param name="currentPosition" value="0"> 
+  <!--当前播放进度，-1表示不变，0表示开头，单位是秒。比如10表示从第10秒处开始--> 
+  <param name="currentMarker" value="0"> 
+  <!--指定当前标记号码，Media Player将从当前标记开始播放视频。如果媒体文件没有标记，设置currentMarker为一个非零值将产生一个错误的结果--> 
+  <!--
+<param name="defaultFrame" value="infoFrame">  -->
+  <!—显示脚本命令中URL的框架名称，取值为frame元素中name属性的值。如果目标框架由脚本命令自身指定，该属性将被忽略。--> 
+  <param name="invokeURLs" value="0"> 
+  <!--脚本命令设置：是否显示来自脚本命令中的URL。音频或视频流中被编码的脚本命令，在播放流时，这些脚本命令可以触发播放器的事件，或者打开浏览器显示某一网页。--> 
+  <param name="baseURL" value=""> 
+  <!--脚本命令设置：相对URL的基地址--> 
+  <param name="stretchToFit" value="0"> 
+  <!--是否按比例伸展--> 
+  <param name="volume" value="50"> 
+  <!--默认声音大小0%-100%，50则为50%--> 
+  <param name="mute" value="0"> 
+  <!--是否静音--> 
+  <param name="uiMode" value="mini"> 
+  <!--播放器显示模式：Full显示全部;mini最简化；None不显示播放控制,只显示视频窗口；invisible全部不显示--> 
+  <param name="windowlessVideo" value="0"> 
+  <!--如果是0可以允许全屏，否则只能在窗口中查看--> 
+  <param name="fullScreen" value="0"> 
+  <!--开始播放是否自动全屏--> 
+  <param name="enableErrorDialogs" value="-1"> 
+  <!--是否启用错误提示报告--> 
+  <!-- 
+<param name="SAMIStyle" value=”style.xml”>  -->
+  <!--SAMI样式，SAMI(Synchronized Accessible Media Interchange)是MediaPlayer字幕文件格式--> 
+  <!-- 
+<param name="SAMILang" value=”zh_CN”>  -->
+  <!--SAMI字幕语言--> 
+  <!--
+<param name="SAMIFilename" value=”subtitle.smi”>  -->
+  <!--SAMI字幕文件--> 
+  </object>
+</body>
+</html>

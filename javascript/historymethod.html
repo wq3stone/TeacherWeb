@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>浏览器对象</title>
+<script type="text/javascript">
+	function historygo() {
+	  var where=document.getElementById("gowhere").value;
+	  history.go(where);
+	}
+</script>
+</head>
+<body>
+<h3>history对象的应用</h3>
+<button name="forwardbtn" id="forwardbtn" onClick="history.forward()">前进</button>
+&nbsp;&nbsp;
+<button name="backbtn" id="backbtn" onClick="history.back()">后退</button>
+<br/><br/>
+转到：<input type="text" name="gowhere" id="gowhere" value="-1" style="width:48px">
+&nbsp;
+<button name="gobtn" id="gobtn" onClick="historygo()">GO</button>
+<p> <a href="windowobj.html">window对象浏览</a> &nbsp;&nbsp; <a href="windowprop.html">window对象属性</a> &nbsp;&nbsp; <a href="windowmethod.html">window对象方法</a> &nbsp;&nbsp; <br/><a href="documentobj.html">document对象</a> &nbsp;&nbsp; <a href="historymethod.html">history对象</a> &nbsp;&nbsp; <a href="locationmethod.html">location对象</a> &nbsp;&nbsp; <a href="navigatormethod.html">navigator对象</a></p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>内置类</title>
+</head>
+<body>
+<h3>字符串 String</h3>
+<script type="text/javascript">
+	var str1 = "abcdefghijklmnopqrstuvwxyzabcdefg";
+	var str2 = String("顶部锚点");
+	var str3 = new String("临沂大学");
+	document.write("str1的类型 = " + typeof str1 + "<br />");
+	document.write("str2的类型 = " + typeof str2 + "<br />");
+	document.write("str3的类型 = " + typeof str3 + "<br />");
+	document.write("str1的长度 = " + str1.length + "<br />");
+	document.write("str1连接str3 = " +str1.concat(str3) + "<br />");
+	document.write(str2.anchor("top") + "<br />");
+	document.write(str3.link("http://www.lyu.edu.cn") + "<br />");	
+	document.write("str1中第3－12个元素之的间子串 = " +str1.substr(2,10) + "<br />");
+	document.write("str1中第3－12个元素之的间子串 = " +str1.substring(2,12) + "<br />");
+	//document.write("str1中第10个元素之后的子串 = " +str1.substr(10) + "<br />");
+	document.write("str1中第10个元素之后的子串 = " +str1.substring(10) + "<br />");
+	//substr()的参数不支持负数，负数转化为0，substring(10,0)=substring(0,10)
+	//substring() 总把较小的数字作为起始位，较大的数字作为终止
+	document.write("str1中第1－10个元素之后的子串 = " +str1.substring(10,-10) + "<br />");
+	//substr()的参数支持负数，负数代表的值为字符串长度加上参数
+	document.write("str1中第11-23之间的子串 = " +str1.slice(10,-10) + "<br />");
+	document.write("str1中的第4个字符 = "+ str1.charAt(3) + "<br />");
+	document.write("str1中的第4个字符的编码 = "+ str1.charCodeAt(3) + "<br />");
+	document.write("abc在str1中的位置 = "+ str1.search("abc") + "<br />");
+	document.write("abc在str1中的第2个位置 = "+ str1.indexOf("abc",2) + "<br />");
+	document.write("c在str1中的正序位置 = "+ str1.indexOf("c") + "<br />");
+	document.write("c在str1中的倒序位置 = "+ str1.lastIndexOf("c") + "<br />");	
+	var strarr=str1.split("c");
+	for(i in strarr) {
+		document.write("strarr[" + i + "]=" + strarr[i] + "<br />");
+	}
+	document.write("str1中的lmn替换为str3 = " + str1.replace("lmn",str3)+ "<br />");
+</script>
+<a href="#top">返回顶部</a>
+<p> <a href="array.html">Array</a> &nbsp;&nbsp; <a href="date.html">Date</a> &nbsp;&nbsp; <a href="math.html">Math</a> &nbsp;&nbsp; <a href="string.html">String</a></p>
+</body>
+</html>

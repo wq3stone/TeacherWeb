@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>类的扩展</title>
+</head>
+<body>
+<script type="text/javascript">
+	var person1=new Object();
+	person1.name="John";
+	person1.age=20;
+	function infodisp() {
+		alert("姓名：" + this.name + "；年龄：" + this.age);
+	}
+	person1.info=infodisp;
+	person1.info();
+</script>
+</body>
+</html>

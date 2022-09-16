@@ -1,0 +1,39 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+</head>
+
+<body>
+<div id="d">ddssdsd</div>
+<script type="text/javascript">
+    var node = document.getElementsByTagName('*');
+    var d = document.getElementById('d');
+	
+    d.addEventListener('click', function () {
+      alert('这是第一次');
+    }, false);
+	
+    d.addEventListener('click', function () {
+      alert('我是第二次');
+    }, false);
+	
+    d.onclick = function () {
+      alert('不规范的绑定');
+    }
+	
+    d.addEventListener('click', function () {
+      alert('这是第四次');
+    }, true);
+
+    /*d.addEventListener('mousedown', function () {
+      alert('mousedown');
+    }, true); */
+
+    var evets = typeof getEventListeners == 'function' && getEventListeners(d);
+	alert("test1: " + evets);
+    alert("test2: " + getEventListeners(d));
+
+  </script>
+</body>
+</html>

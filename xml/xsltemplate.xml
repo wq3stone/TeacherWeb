@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="template1.xsl"?>
+<myMessage>
+  <message>Welcome to XSL!</message>
+  <message>Another message!</message>
+  <msg1>Test message!</msg1>
+</myMessage>

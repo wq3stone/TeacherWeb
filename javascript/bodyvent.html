@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript事件</title>
+<script type="text/javascript">
+  window.onbeforeunload = function() {
+	  return confirm("确定要离开当前网页？");
+  }
+</script>
+</head>
+<body onLoad="alert('网页已加载完毕！')" onUnload="alert('再见！欢迎再来。')">
+<h3>页面事件处理</h3>
+<a href="http://www.lyu.edu.cn">转到临沂大学</a>
+<p> <a href="muouseevent.html">鼠标事件</a> &nbsp;&nbsp; <a href="keyboardevent.html">键盘事件</a> &nbsp;&nbsp; <a href="bodyvent.html">页面事件</a> &nbsp;&nbsp; <a href="formvent.html">表单事件</a></p>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>表单示例</title>
+</head>
+<body>
+<h3 align="center">个人信息表单</h3>
+<form name="form1" method="post" action="act.asp">
+  <table align="center" cellpadding="4" cellspacing="4">
+  	<tr><td width="256" valign="top"><fieldset>
+      <legend>基本信息</legend>
+        <label for="tx1">姓名：</label>
+          <input type="text" name="tx1" id="tx1" value="请填写姓名!">
+          <p><label>性别： 
+            <input type="radio" name="gender" vlaue="male" checked>男
+            <input type="radio" name="gender" vlaue="female">女</label></p>
+          <p><label>爱好：
+            <input type="checkbox" name="qualifer" vlaue="tcher" checked>音乐
+            <input type="checkbox" name="qualifer" vlaue="tcher">美术</label></p>
+          <p><label for="choice">籍贯：</label>
+            <select name="choice" id="choice">
+              <option value="-1" selected>请选择</option>
+              <option value="x1">北京</option>
+              <option value="x2">济南</option>
+              <option value="x3">临沂</option>
+              <option value="x4">上海</option>
+            </select></p>
+          <p><input type="submit" value="提交">
+            <input type="reset" value="重设"></p>
+        </fieldset></td>
+      <td width="467" valign="top"><fieldset>
+          <legend>简历</legend>
+          <textarea cols="64" rows="12">从高中时起，各个时段的学习、工作、职务等情况。</textarea>
+        </fieldset></td>
+    </tr>
+  </table>
+</form>
+<p> <a href="formex.html">表单基本控件</a> &nbsp; <a href="fieldset.html">表单辅助标记</a></p>
+</body>
+</html>

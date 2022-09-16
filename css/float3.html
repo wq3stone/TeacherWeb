@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>浮动引起的高度塌陷</title>
+<style type="text/css">
+.container
+{
+	width:580px; /*不设置高度，高度随内容自动增加 */
+	border: 1px dashed #C0C0C0;	
+	background-color:#D3E2F5;
+	/*float:left */  /*设置容器元素为浮动，是解决浮动塌陷问题的方法之一 */
+	/* overflow:hidden; */  /*设置容器元素的overflow属性值，亦是解决浮动塌陷问题的方法之一 */
+	/* position:absolute; */  /*设置容器元素为绝对定位，亦是解决浮动塌陷问题的方法之一 */
+}
+.floater1
+{
+	float:left;
+	margin:4px; padding:4px;
+}
+.floater2
+{
+	float:left;
+	margin:4px; padding:4px;
+	width:360px; height:128px;
+	background-color:#FAFAF1;
+	line-height: 1.6em;
+}
+/*在浮动元素之后，添加一个空元素，设置其有效的clear属性值，是解决浮动塌陷问题的方法之一 */
+.floater3
+{
+	clear:left;
+}
+</style>
+</head>
+<body>
+<h3>浮动引起父容器的高度塌陷问题</h3>
+<div class="container">
+	<img class="floater1" src="images/verticalalignex.jpg"/>
+    <div class="floater2">因浮动元素脱离了文档流，对于高度自增的容器，若浮动元素之后无其它内容，则会出现容器不包含浮动元素，使父标签的高度缺失，特别是当容器中只包含浮动元素时，容器将成为空的、零高度、不占据空间的元素，这种现象称为浮动的高度塌陷。</div>
+    <!-- 在浮动元素之后，添加一个空元素并且清理它，是解决浮动塌陷问题的方法之一 -->
+    <div class="floater3"></div>
+</div>
+<p> <a href="float.html">浮动1</a> &nbsp; <a href="float2.html">浮动2</a> &nbsp; <a href="float3.html">浮动3</a></p>
+</body>
+</html>

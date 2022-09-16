@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>div垂直对齐</title>
+<style type="text/css">
+.box {
+	width: 500px; height: 240px; /*父容器必须设置固定的高度 */
+	background-color: #CFF; /*加背景色突出显示效果 */
+	padding: 2px; /*设置border or padding or float以阻止子元素的margin-top合并 */
+}
+.content {
+	position: relative;  /*必须设置为非static，以便设置top属性值 */
+	top: 50%; /*关键样式 */
+	margin-top: -60px;  /*negative half of the height */
+	height: 120px;
+	background-color: #C0DCC0; /*加背景色突出显示效果 */
+	overflow: auto;
+}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="content">
+    <h1>标题行</h1>
+    区块内容</div>
+</div>
+<p> <a href="valigndivtd.html">div内容垂直居中</a> &nbsp; <a href="valigndiv2.html">div垂直居中1</a> &nbsp; <a href="valigndiv3.html">div垂直居中2</a></p>
+</body>
+</html>

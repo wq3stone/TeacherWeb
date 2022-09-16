@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS 3</title>
+<style type="text/css">
+div#container {
+	display: box;
+	display: -moz-box;
+	display: -webkit-box;
+	width: 1000px;
+	text-align: left;
+}
+#container>div {
+	border: 1px solid #aaf;
+	/* 设置HTML元素的width属性包括边框 */
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border-radius: 12px 12px 0px 0px;
+	background-color: #ffc;
+	padding: 8px;
+	line-height: 1.8;
+}
+</style>
+</head>
+<body>
+<h3>多栏布局</h3>
+<div style="margin:auto;text-align:center;">
+  <div id="container">
+    <div style="width:220px">
+      <h3>临沂大学工科学部</h3>
+      <ul>
+        <li>信息学院</li>
+        <li>物流学院</li>
+        <li>工程学院</li>
+        <li>理学院</li>
+        <li>信息中心</li>
+      </ul>
+    </div>
+    <div style="width:500px; text-indent:2em;">
+      <h3>信息学院介绍</h3>
+      <div>信息学院拥有计算机科学与技术、软件工程、网络工程、通信工程、信息工程5个本科专业，通信技术、计算机应用技术、计算机软件技术、计算机网络技术4个专科专业，全日制在校生2141人，其中本科生1604人、专科生537人。</div>
+      <div>学院机构设置包括计算机工程系、网络与信息工程系、软件工程系、通信工程系和公共计算机教学部5个教学系，以及信息技术实验中心、公共计算机基础教学中心，共有教职员工98人，其中专职教师82人。正高级职称者8人，副高级职称者27人，具有博士学位者18人，在读博士6人，硕士研究生导师4人。</div>
+      <div>学院现拥有山东省网络环境智能计算重点实验室临大研究所，临沂市物流信息工程技术研究中心，同时设有3个校级学科团队和5个院级学术团队。学院科研组织架构初步形成，良好的发展环境正在形成，激发的研究能力逐步显现。</div>
+      <br/>
+    </div>
+    <div style="width:280px">
+      <h3>Web技术基础</h3>
+      <ul>
+        <li id="html">超文本标记语言 HTML</li>
+        <li id="css">层叠样式表 CSS</li>
+        <li id="js">JavaScript脚本语言</li>
+        <li id="xml">可扩展标记语言 XML</li>
+        <li id="dw">Web编辑工具 Dreamweaver</li>
+        <li id="html5">超文本标记语言版本5 HTML 5</li>
+        <li id="css3">层叠样式表版本3 CSS 3</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

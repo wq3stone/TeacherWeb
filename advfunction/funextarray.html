@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>类的扩展</title>
+</head>
+<body>
+<script type="text/javascript">
+	// 为Array增加indexof方法，将该函数增加到prototype属性上
+	Array.prototype.indexof = function(obj)
+	{		
+		var result = -1;	// 定义返回值，未找到为-1
+		// 遍历数组的每个元素
+		for (var i = 0 ; i < this.length ; i ++)
+		{
+			// 当数组的第i个元素值等于obj时
+			if (this[i] == obj)
+			{
+				// 将result的值赋为i，并结束循环。
+				result = i;
+				break;
+			}
+		}
+		// 返回元素所在的位置。
+		return result;
+	}
+	var arr = [26, "Hello", 8, "John"];
+	// 测试为arr新增的indexof方法
+	alert("Hello是数组中的第" + arr.indexof("Hello") + "个元素。");
+</script>
+<p> <a href="funprototype.html">自定义类的扩展</a> &nbsp;&nbsp; <a href="funextarray.html">内置类的扩展</a></p>
+</body>
+</html>

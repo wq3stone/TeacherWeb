@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript应用</title>
+</head>
+<body>
+<h3>增加网页元素示例</h3>
+<div id="dvsel" style="margin:8px"></div>
+<script type="text/javascript">
+  // 创建<select.../>对象
+  var a = document.createElement("select");
+  // 为<select.../>对象增加8个选项
+  for (var i = 0 ; i < 8 ; i++) {
+	// 创建一个<option.../>元素
+	var op = document.createElement("option");
+	op.innerHTML = '新增的选项' + i;
+	// 将新的选项添加到列表框的最后
+	a.add(op , null);
+  }
+  // 设置列表框高度为5
+  a.size = 5;
+  // 将列表框增加成div元素的子节点
+  document.getElementById("dvsel").appendChild(a);
+</script>
+<p> <a href="addelement.html">增加HTML元素</a> &nbsp;&nbsp; <a href="updateelement.html">修改HTML元素</a> &nbsp;&nbsp; <a href="deleteelement.html">删除HTML元素</a></p>
+</body>
+</html>

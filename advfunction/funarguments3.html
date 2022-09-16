@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>函数的参数</title>
+</head>
+<body>
+<script type="text/javascript">
+	 var accum=function(n){ 
+	 	if(1==n)return 1;  
+		//else return n + accum(n-1); 
+		else return n + arguments.callee(n-1); 
+	}  
+	alert("100之内的数累加之和＝" + accum(100));  
+</script>
+<p> <a href="funarguments1.html">argument1</a> &nbsp;&nbsp; <a href="funarguments2.html">argument2</a> &nbsp;&nbsp; <a href="funarguments3.html">argument3</a> &nbsp;&nbsp; <a href="funarguments4.html">argument4</a></p>
+</body>
+</html>

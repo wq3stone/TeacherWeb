@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>浏览器工作模式</title>
+</head>
+<body>
+<h3>浏览器的工作模式</h3>
+<script type="text/javascript">
+  var cmode="未知模式";
+  if(document.compatMode=="BackCompat") cmode="怪异模式";
+  else if(document.compatMode=="CSS1Compat") cmode="标准模式，或者几乎标准模式";
+  document.write("浏览器当前的工作模式为：" + cmode);
+  alert("浏览器当前的工作模式为：" + cmode);
+</script>
+</body>
+</html>

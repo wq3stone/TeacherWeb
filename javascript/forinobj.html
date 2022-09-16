@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>流程控制</title>
+<script language="javascript">
+  function displayObjProperty(obj) {
+  	for(p in obj) {
+    	document.write(obj.toString() + "." + p + " = " + obj[p] + "<br />");
+  	}
+  }
+</script>
+</head>
+<body>
+<h3>document对象的属性</h3>
+<script language="javascript">
+  var strobj = new String("StringObject");
+  displayObjProperty(strobj);
+</script>
+<p> <a href="ifelse.html">条件语句</a> &nbsp; <a href="switch.html">分支语句</a> &nbsp;&nbsp; <a href="for.html">for循环</a> &nbsp;&nbsp; <a href="while.html">while循环</a> &nbsp;&nbsp; <a href="dowhile.html">do-while循环</a> &nbsp;&nbsp; <br />
+<a href="forinobj.html">for-in1</a> &nbsp;&nbsp; <a href="forinarr.html">for-in2</a> &nbsp;&nbsp;&nbsp; <a href="with.html">with语句</a> &nbsp;&nbsp; <a href="trycatch.html">异常捕获</a> &nbsp;&nbsp; <a href="throw.html">异常抛出</a></p>
+</body>
+</html>

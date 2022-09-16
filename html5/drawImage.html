@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>绘制位图</title>
+</head>
+<body>
+<h3> 绘制位图</h3>
+<canvas id="image" width="500" height="280" 
+	style="border:1px solid black"></canvas>
+<script type="text/javascript">
+  var canvas = document.getElementById('image');
+  var crc2D = canvas.getContext('2d');
+  var image = new Image();// 创建Image对象
+  image.src = "images/HTML 5 logo.jpg";// 指定Image对象装载图片
+  // 当图片装载完成时激发该函数
+  image.onload = function() {
+	  crc2D.drawImage(image ,0 , 0);// 保持原大小绘制图片
+	  crc2D.drawImage(image , 200 , 0 , 97 , 112);// 绘制图片时进行缩放
+	  // 从源位图中挖取一块区域按原大小绘制在Canvas上
+	  crc2D.drawImage(image, 20, 40 , 150, 120, 300, 0, 150, 120);
+  }
+</script>
+</body>
+</html>

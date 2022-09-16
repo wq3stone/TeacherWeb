@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>二次曲线</title>
+</head>
+<body>
+<h3>绘制二次曲线</h3>
+<canvas id="curve" width="420" height="280" style="border:1px solid black"></canvas>
+<script type="text/javascript">
+  var canvas = document.getElementById('curve');
+  var crc2D = canvas.getContext('2d');
+  crc2D.beginPath(); 
+  crc2D.moveTo(50 , 250);	//开始点坐标
+  crc2D.quadraticCurveTo(200,50,350,250);	//参数确定控制点和结束点的坐标
+  crc2D.moveTo(200,50);
+  crc2D.arc(200,50,5,0,Math.PI*2,true);	//用圆形标注控制点
+  crc2D.closePath();
+  crc2D.strokeStyle = "#f00";
+  crc2D.stroke();
+</script>
+</body>
+</html>

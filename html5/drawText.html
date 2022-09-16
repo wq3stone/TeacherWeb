@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>绘制字符串</title>
+</head>
+<body>
+<h3> 绘制字符串 </h3>
+<canvas id="text" width="500" height="180"
+	style="border:1px solid black"> </canvas>
+<script type="text/javascript">
+	// 获取canvas元素对应的DOM对象
+	var canvas = document.getElementById('text');
+	// 获取在canvas上绘图的CanvasRenderingContext2D对象
+	var crc2D= canvas.getContext('2d');
+	crc2D.fillStyle = '#00f';
+	crc2D.font = 'italic 40px 隶书';
+	crc2D.textBaseline = 'top';
+	crc2D.textAlign="start";
+	crc2D.fillText('Web技术基础',20, 20);// 填充字符串
+	crc2D.strokeStyle = '#f0f';
+	crc2D.font='italic 40px 隶书';
+	crc2D.strokeText('HTML、CSS和JavaScript',20, 70);// 绘制字符串的边框
+	crc2D.strokeText('HTML、CSS和JavaScript',20, 120,300);
+</script>
+</body>
+</html>

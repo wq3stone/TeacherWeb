@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript变量</title>
+<script language="javascript">
+	var gv1, gv2="Hello";
+	gv3=68;
+	function dispvar(param1, param2) {
+		document.write(param1 + " = " + param2 + "<br/>");
+	}
+</script>
+</head>
+<body>
+<h3>JavaScript变量作用域</h3>
+<script language="javascript">
+	function vscptest1() {
+		gv1="全局变量1";
+		gv4="全局变量4";
+		var lv1="局部变量1";
+		dispvar("函数1中的变量gv1", gv1);
+		dispvar("函数1中的变量gv2", gv2);
+		dispvar("函数1中的变量gv3", gv3)	//局部变量gv3，未初始化
+		dispvar("函数1中的变量gv4", gv4)
+		dispvar("函数1中的变量lv1", lv1);
+		var gv3="局部变量覆盖全局变量";
+		dispvar("函数1中的变量gv3", gv3);
+		document.write("<br/>");
+	}
+	function vscptest2() {
+		var lv2="局部变量2";
+		dispvar("函数2中的变量gv1", gv1);
+		dispvar("函数2中的变量gv2", gv2);
+		dispvar("函数2中的变量gv3", gv3)	//全局变量gv3
+		dispvar("函数2中的变量gv4", gv4)
+		dispvar("函数2中的变量lv2", lv2);
+		document.write("<br/>");
+	}
+	vscptest1();
+	vscptest2();
+</script>
+<p> <a href="varscope.html">变量作用域</a> &nbsp;&nbsp; <a href="autoconvert.html">隐式转换</a> &nbsp;&nbsp; <a href="auto2str.html">隐式转换为String</a> &nbsp;&nbsp; <br /><a href="parseint.html">parseInt()</a> &nbsp;&nbsp; <a href="parsefloat.html">parseFloat()</a> &nbsp;&nbsp; <a href="stringmethod.html">String()</a> &nbsp;&nbsp; <a href="tostring.html">toString()</a></p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript变量</title>
+</head>
+<body>
+<h3>强制类型转toString()</h3>
+<script language="javascript">
+	var x1=6.8e3, x2=true, x3, x4=null, x5=0xA, x6=68;
+	document.write("小数值转换为字符串：" + x1.toString() + "<br/>");
+	document.write("逻辑值转换为字符串：" + x2.toString() + "<br/>");
+	//document.write("undefined转换为字符串：" + x3.toString() + "<br/>");
+	//document.write("null转换为字符串：" + x4.toString() + "<br/>");
+	document.write("十六进制数值转换为字符串：" + x5.toString() + "<br/>");
+	document.write("整数数值转换为字符串：" + x6.toString() + "<br/>");
+	document.write("全局对象转换为字符串：" + toString() + "<br/>");
+</script>
+<p> <a href="varscope.html">变量作用域</a> &nbsp;&nbsp; <a href="autoconvert.html">隐式转换</a> &nbsp;&nbsp; <a href="auto2str.html">隐式转换为String</a> &nbsp;&nbsp; <br /><a href="parseint.html">parseInt()</a> &nbsp;&nbsp; <a href="parsefloat.html">parseFloat()</a> &nbsp;&nbsp; <a href="stringmethod.html">String()</a> &nbsp;&nbsp; <a href="tostring.html">toString()</a></p>
+</body>
+</html>

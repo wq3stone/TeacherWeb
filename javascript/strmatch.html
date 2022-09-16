@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Regular Express</title>
+</head>
+<body>
+<h3>String.match()方法</h3>
+<script type="text/javascript">
+  var str="Hi,High,History,China are all English words.";
+  var strs=str.match(/(hi)(\w+)/i); 
+  document.write("str=" + str + "<br />");  
+  for(i in strs) {
+    document.write("strs[" + i + "]=" + strs[i] + "<br />");
+   }
+</script>
+<p> <a href="strmatch.html">String对象的match()方法</a> &nbsp;&nbsp; <a href="regexpexec.html">RegExp对象的exec()方法</a> &nbsp;&nbsp; <a href="regexptest.html">RegExp对象的test()方法</a></p>
+</body>
+</html>

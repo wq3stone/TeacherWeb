@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<body>
+<script type="text/javascript">
+function fn1(param1) {
+	this.prop1=param1;
+	alert("函数fn1被执行。参数：" + param1);
+}
+var fn2=function(param1) {
+	this.prop2=param1;
+	alert("函数fn2被执行。参数：" + param1);
+};
+var fn3=new fn1("test3");
+var fn4=new fn2("test4");
+var fn5=new Function("param1", "this.prop1=param1; alert('函数fn5被执行。参数：'+ param1);");
+ 
+fn1("test1");
+fn2("test2");
+//fn3("test3");
+//fn4("test4");
+fn5("test5");
+
+alert(fn1);
+alert(fn2);
+alert(fn3);
+alert(fn4);
+alert(fn5);
+
+alert(typeof(fn1));
+alert(typeof(fn2));
+alert(typeof(fn3));
+alert(typeof(fn4));
+alert(typeof(fn5));
+
+</script>
+</body>
+</html>

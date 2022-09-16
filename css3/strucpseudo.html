@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS 3</title>
+<style type="text/css">
+/* 定义对作为其父元素的第一个子节点的li元素起作用的CSS样式 */
+
+li:first-child {
+	border: 1px solid black;
+}
+/* 定义对作为其父元素的最后一个子节点的li元素起作用的CSS样式 */
+li:last-child {
+	background-color: #aaa;
+}
+/* 定义对作为其父元素的第2个子节点的li元素起作用的CSS样式 */
+li:nth-child(2) {
+	color: #888;
+}
+/* 定义对作为其父元素的倒数第2个子节点的li元素起作用的CSS样式 */
+li:nth-last-child(2) {
+	font-weight: bold;
+}
+/* 定义对作为其父元素的唯一的子节点的span元素起作用的CSS样式 */
+span:only-child {
+	font-size: 30pt;
+	font-family: "隶书";
+}
+</style>
+</head>
+<body>
+<div style="width:360px">
+<ol>
+  <li>信息学院</li>
+  <li>物流学院</li>
+  <li>工程学院</li>
+  <li>理学院</li>
+  <li>信息中心</li>
+</ol>
+<ul>
+  <li id="html">超文本标记语言 HTML</li>
+  <li id="css">层叠样式表 CSS</li>  
+  <li id="js">JavaScript脚本语言</li>
+  <li id="xml">可扩展标记语言 XML</li>
+  <li id="dw">Web编辑工具 Dreamweaver</li>
+  <li id="html5">超文本标记语言版本5 HTML 5</li>
+  <li id="css3">层叠样式表版本3 CSS 3</li>
+</ul>
+<span>山东省临沂大学</span>
+</div>
+<p> <a href="strucpseudo.html">结构性伪类选择器</a> &nbsp;&nbsp; <a href="uipseudo.html">UI状态伪类选择器</a></p>
+</body>
+</html>

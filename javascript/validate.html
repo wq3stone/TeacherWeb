@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript应用</title>
+<style>
+td div {
+	font-size: 12px;
+}
+</style>
+<script language="javascript" src="validate.js"></script>
+<script language="javascript">
+ function $(id){
+  return document.getElementById(id);
+ }
+function chkPasswords() {
+	if(isBlank($("password").value)) {
+	   $("passwordPrompt").style.color="red";
+	   $("passwordPrompt").innerHTML="*密码必须填写！";
+	   return false;
+   }
+   else {
+	   $("passwordPrompt").style.color="black";
+	   $("passwordPrompt").innerText="*";
+   }
+	if($("password").value!=$("password2").value) {
+		$("password2Prompt").style.color="red";
+	   	$("password2Prompt").innerHTML="*两次密码输入不一致！";
+		return false;
+	}
+	else {
+		$("password2Prompt").style.color="black";
+	   	$("password2Prompt").innerText="*";
+	}
+	return true;
+}
+function chkUsername() {
+	if(isBlank($("username").value)) {
+	   $("usernamePrompt").style.color="red";
+	   $("usernamePrompt").innerHTML="*用户名必须填写！";
+	   return false;
+   }
+   else {
+	   $("usernamePrompt").style.color="black";
+	   $("usernamePrompt").innerText="*";
+   }
+   var re=new RegExp(/^[a-zA-Z]\w{5,11}$/);
+	if(!re.test($("username").value)) {
+		$("usernamePrompt").style.color="red";
+	   	$("usernamePrompt").innerText="*只能以英文开头，6-12个英文、数字或下划线！";
+		return false;
+	}
+	else
+	{
+		$("usernamePrompt").style.color="black";
+	   	$("usernamePrompt").innerText="*";
+	}
+	return true;
+}
+function chkIdnum() {
+	if(!isBlank($("idnum").value)) {
+		if(!isIdcardNum($("idnum").value)) {
+	   		$("idnumPrompt").style.color="red";
+	   		$("idnumPrompt").innerText="身份证号应为18位数字！";
+	   		return false;
+		}		
+   	}
+   	$("idnumPrompt").style.color="black";
+	$("idnumPrompt").innerText="";
+	return true;
+}
+function chkPhonenum() {
+	if(!isBlank($("phonenum").value)) {
+		if(!isPhoneNum($("phonenum").value)) {
+	   		$("phonenumPrompt").style.color="red";
+	   		$("phonenumPrompt").innerText="电话号码格式不正确！";
+	   		return false;
+		}
+   	}
+   	$("phonenumPrompt").style.color="black";
+	$("phonenumPrompt").innerText="";
+	return true;
+}
+function chkAll() {
+	var msg="";
+	if(!chkUsername($("username").value)) {
+		msg +="用户名格式不正确！\n";
+	}
+	if(!chkPasswords($("password2").value)) {
+		msg +="密码输入不正确！\n";
+	}
+	if(!chkIdnum($("idnum").value)) {
+		msg +="身份证号码格式不正确！\n";
+	}
+	if(!chkPhonenum($("phonenum").value)) {
+		msg +="电话号码格式不正确！\n";
+	}
+	if(msg!="") {
+		msg=msg.substr(0,msg.length-1);
+		alert(msg);
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body>
+<h3>表单验证示例</h3>
+<form id="myForm" action="" onsubmit="return chkAll();">
+  <fieldset style="width:660px">
+    <legend>用户注册信息</legend>
+    <table cellpadding="6" width="656">
+      <tr>
+        <td width="100" align="right">用户名</td>
+        <td width="147"><input name="text" type="text" id="username" size="20" 
+          	onblur="chkUsername();" /></td>
+        <td><div id="usernamePrompt">*6-12个字符！</div></td>
+      </tr>
+      <tr>
+        <td align="right">性别</td>
+        <td><label>
+            <input name="gender" type="radio" value="male" checked="checked" />
+            男&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="gender" value="female" />
+            女</label></td>
+        <td><div id="genderPrompt">*</div></td>
+      </tr>
+      <tr>
+        <td align="right">密码</td>
+        <td><input name="password" type="password" id="password" size="21" /></td>
+        <td><div id="passwordPrompt">*</div></td>
+      </tr>
+      <tr>
+        <td align="right">重复密码</td>
+        <td><input name="password2" type="password" id="password2" size="21" 
+          	onblur="chkPasswords();" /></td>
+        <td><div id="password2Prompt">*</div></td>
+      </tr>
+      <tr>
+        <td align="right">身份证号码</td>
+        <td><input type="text" name="idnum" id="idnum" size="20" 
+          	onblur="chkIdnum();"/></td>
+        <td><div id="idnumPrompt">&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td align="right">联系电话</td>
+        <td><input type="text" name="phonenum" id="phonenum" size="20" 
+          	onblur="chkPhonenum();"/></td>
+        <td><div id="phonenumPrompt">&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td align="right">&nbsp;</td>
+        <td align="center"><input name="submit" type="submit" value="提交" />
+          &nbsp;&nbsp;
+          <input name="reset" type="reset" value="重置" /></td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </fieldset>
+</form>
+</body>
+</html>

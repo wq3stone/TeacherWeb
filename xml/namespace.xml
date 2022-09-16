@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<china xmlns="http://www.stateinfo.org.cn/provinces" xmlns:sprg="http://www.stateinfo.org.cn/specialregion" xmlns:cap="http://www.stateinfo.org.cn/province-capitals">
+<!-- 本XML文档中的标记分别属于3个名称空间 -->
+	<province>
+		<name>山东</name>
+		<population>100000000</population>
+		<capital>
+			<cap:name>济南</cap:name>
+			<cap:population>10000000</cap:population>
+		</capital>
+	</province>
+	<specialregion>
+		<sprg:name>北京</sprg:name>
+		<sprg:population>20000000</sprg:population>
+	</specialregion>
+	<!-- more provinces and regions -->
+</china>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSON对象</title>
+</head>
+<body>
+<script type="text/javascript">
+	// 定义一个对象
+	var person =
+	{
+		name : 'John',	// 字符串属性
+		age : 20,	// 数字属性
+		gender : true,	// 逻辑属性
+		schools : ['小学' , '中学' , "大学"],	// 数组属性
+		parents : 	// 对象属性
+			{
+				name : 'father',
+				age : 60,
+				address : '深圳'
+			}, 
+		info : function() {	// 函数对象属性，perdon对象的方法
+			alert("姓名：" +this.name + "；性别：" + (this.gender? "男" : "女") 
+				+ "；年龄：" + this.age + "；父母住址：" + this.parents.address);
+		}
+	};
+	person.info();
+</script>
+</body>
+</html>

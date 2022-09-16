@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>多媒体播放</title>
+</head>
+<body>
+<h3>video播放音乐</h3>
+<select id="typeSel" style="width:160px">
+    <option value="sequence">顺序播放</option>
+    <option value="random">随机播放</option>
+</select>
+<br/><br/>
+<audio id="player" controls>当前浏览器不支持audio标记</audio>
+<script type="text/javascript">
+    // 定义能播放的所有音乐
+    var musics = [
+        "demo1.ogg",
+        "bomb.ogg",
+        "arrow.ogg",
+        "love.ogg",
+        "song.ogg",
+    ];
+    // 定义正在播放的音频文件的索引
+    var index = 0;
+    // 记录顺序播放、随机播放的变量
+    var playType;
+    var player;
+	var typeSel = document.getElementById("typeSel");
+	// 当用户更改下拉菜单的选项时，改变播放方式
+	typeSel.onchange = function() {
+		window.playType = typeSel.value;
+	}
+	player = document.getElementById("player");
+	// 页面加载时播放第一个音频文件
+	player.src = musics[index];
+	player.onended = function() {
+		if(playType == "random") {
+			// 计算一个随机数
+			index = Math.floor(Math.random() * musics.length);
+			// 随机播放一个音频文件
+			player.src = musics[index];
+		}
+		else {
+			// 播放下一个音频文件
+			player.src = musics[++index % musics.length];
+		}
+		// 播放
+		player.play();
+	}
+</script>
+<p> <a href="audioplay.html">音频播放</a> &nbsp;&nbsp; <a href="videoplay.html">视频播放</a> &nbsp;&nbsp; <a href="jsplay.html">JS脚本控制播放</a></p>
+</body>
+</html>

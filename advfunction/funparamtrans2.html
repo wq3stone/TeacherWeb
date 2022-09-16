@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>函数的参数</title>
+</head>
+<body>
+<script type="text/javascript">
+	function Person(age) {
+		this.age=age;
+	}
+	var p1=new Person(20);
+	function fnchparam2(person) {		
+		person.age = 18;	//修改person的age属性，将改变实参p1的age属性值
+		// 输出person的age属性
+		document.write("函数执行中person的age值为：" + person.age + "<br />");		
+		person = null;	//将person变量直接赋为null，并不会修改实参p1
+	}
+	document.write("函数调用之前p1的age的值为：" + p1.age + "<br />");
+	//调用函数
+	fnchparam2(p1);
+	//输出函数调用后p1实例的age属性值
+	document.write("函数调用之后p1的age的值为：" + p1.age + "<br />");
+	document.write("p1对象为：" + p1);	//p1并不是null，仍然是一个对象 
+	//p1对象本身并未传入函数，传入函数的仍然是p1的副本。
+</script>
+<p> <a href="funparamtrans.html">基本类型参数</a> &nbsp;&nbsp; <a href="funparamtrans2.html">复合类型参数</a></p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>内置类</title>
+</head>
+<body>
+<h3>日期 Date</h3>
+<script type="text/javascript">
+	var currentDate = new Date();	//当前日期对象
+	var laborday = new Date(2016, 4, 1);	//月份0－11
+	var weekname="日一二三四五六";
+	document.write("今天的日期：" + currentDate.toLocaleDateString() + "<br />");
+	document.write("2016年的劳动节：" + (laborday.getYear() + 1900) + "年" 
+	+ (laborday.getMonth()+1) + "月" + laborday.getDate() + "日" 
+	+ " 星期" + weekname.substr(laborday.getDay(),1) + "<br />");
+</script>
+<p> <a href="array.html">Array</a> &nbsp;&nbsp; <a href="date.html">Date</a> &nbsp;&nbsp; <a href="math.html">Math</a> &nbsp;&nbsp; <a href="string.html">String</a></p>
+</body>
+</html>

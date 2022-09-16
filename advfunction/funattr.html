@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>函数的属性</title>
+</head>
+<body>
+<script language="javascript">
+	function Student(name,gender,birth) {
+		// 定义Student的静态属性
+		Student.school;
+		Student.location;
+		Student.sncount;
+		// 定义实例属性		
+		this.snum = ++Student.sncount;	//类属性sncount加1并赋于实例属性snum。
+		this.name = name;	// 将形参（局部变量）name的值赋值给该实例属性。
+		this.gender=gender;
+		this.birth=birth;
+		this.school=Student.school;
+		this.location=Student.location;
+	}	
+	Student.school = "临沂大学";
+	Student.location = "临沂市双岭路";
+	Student.sncount="201309270100";		
+	student1=new Student("陈淑敏","女","1992-12-6");
+	student2=new Student("王逸如","男","1993-8-19");
+	document.write("<br />对象Student具有的属性为：" + "<br />");	
+	for(var prop in Student) {
+		document.write("Student." + prop + " = " + Student[prop] + "<br />");
+	}	
+	document.write("对象student1的具有的属性为：" + "<br />");	
+	for(var prop in student1) {
+		document.write("student1." + prop + " = " + student1[prop] + "<br />");
+	}
+	document.write("对象student2的具有的属性为：" + "<br />");	
+	for(var prop in student2) {
+		document.write("student2." + prop + " = " + student2[prop] + "<br />");
+	}
+</script>
+</body>
+</html>

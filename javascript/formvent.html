@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript事件</title>
+</head>
+<body>
+<h3>表单事件处理</h3>
+<form name="form1" id="form1" onSubmit="return confirm('确定要提交表单吗？')">
+<div style="width:540px;padding:8px">
+<fieldset style="padding:16px;">
+  <legend>表单事件示例</legend>
+  <label for="tx1">焦点1：</label>
+  <input type="text" name="tx1" id="tx1" value="请点击我!" 
+  	onFocus="this.value='哈，我获得了焦点！'" onBlur="this.value='不要离开我！'" 
+    onSelect="alert('选取了焦点1的：' + getSelection())">
+   &nbsp;&nbsp;&nbsp;&nbsp;
+  <label for="tx2">焦点2：</label>
+  <input type="text" name="tx2" id="tx2" value="请点击我!" 
+  	onFocus="this.value='嘻，焦点在我这里了！'" onBlur="this.value='请别走，回来！'" 
+    onSelect="alert('选取了焦点2的：' + getSelection())">
+  <p>
+    <label>爱好：
+      <input type="checkbox" name="qualifer" vlaue="音乐" checked 
+      	onchange="if(this.checked) alert('喜欢音乐，您是佳人！')">
+      音乐&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" name="qualifer" vlaue="体育" checked 
+      	onchange="if(this.checked) alert('喜欢体育，您是健将！')">
+      体育&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" name="qualifer" vlaue="美术" 
+      	onchange="if(this.checked) alert('喜欢美术，您是才子！')">
+      美术    
+      </label>
+  </p>
+  <p>
+    <label for="choice">导航：</label>
+    <select name="choice" id="choice"  
+    	onchange="JavaScript:location.href=this.value;this.selectedIndex=0">
+      <option value="-1" selected>友情链接</option>
+      <option value="http://www.lyu.edu.cn">临沂大学</option>
+      <option value="http://info.lyu.edu.cn">信息学院</option>
+    </select>
+  </p>
+  <p style="text-align:center">
+    <input type="submit" value="提交">&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="reset" value="重设" onClick="return confirm('确认要清除所有的输入内容吗？')">
+  </p>
+</fieldset>
+</div>
+</form>
+<p> <a href="muouseevent.html">鼠标事件</a> &nbsp;&nbsp; <a href="keyboardevent.html">键盘事件</a> &nbsp;&nbsp; <a href="bodyvent.html">页面事件</a> &nbsp;&nbsp; <a href="formvent.html">表单事件</a></p>
+</body>
+</html>

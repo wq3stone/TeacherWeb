@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+#content {
+	background-image: url(../html/images/bg3.jpg);
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	width: 540px;
+	height: 320px;
+	border-style: double solid;
+	border-width: 2px 1px;
+	border-color: blue #A8C6ED;
+	border-collapse: collapse;
+	padding: 2mm 8mm;
+	margin: 4pt;
+	color:#2A7F00;
+	overflow: auto; /*见3.4.4 */
+}
+ul {
+	padding-left: 48px;
+	line-height:32px;
+}
+.ftcss {
+	font-family: 宋体, sans-serif;
+	font-size: 12pt;
+	color: #0011aa;
+	text-align: left;
+	text-indent: 2em;
+	line-height: 1.8;
+}
+.bold {
+	font-weight: 600
+}
+.italic {
+	font-style: italic
+}
+.underline {
+	text-decoration: underline
+}
+.bgtest {
+	line-height: 28px;
+	padding-left: 24px;
+}
+
+

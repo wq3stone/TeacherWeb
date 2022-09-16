@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>贝济埃曲线</title>
+</head>
+<body>
+<h3>绘制贝济埃曲线</h3>
+<canvas id="mc" width="420" height="280" style="border:1px solid black"></canvas>
+<script type="text/javascript">
+  var canvas = document.getElementById('mc');
+  var ctx = canvas.getContext('2d');
+  ctx.beginPath(); 
+  ctx.moveTo(50 , 50);//开始点坐标
+  //参数确定两个控制点和结束点的坐标
+  ctx.bezierCurveTo(100,200,200,50,250,200);
+  ctx.moveTo(100,200);
+  ctx.arc(100,200,5,0,Math.PI*2,true);	//用圆形标注第一个控制点
+  ctx.moveTo(200,50);
+  ctx.arc(200,50,5,0,Math.PI*2,true);		//用圆形标注第二个控制点
+  ctx.closePath();
+  ctx.strokeStyle = "#f00";
+  ctx.stroke();
+</script>
+</body>
+</html>

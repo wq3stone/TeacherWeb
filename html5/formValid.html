@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML 5为表单控件新增的校验属性</title>
+</head>
+<body>
+<table align="center" border="1">
+  <caption>大学新生信息采集</caption>
+  <form action="" method="post">
+    <tr>
+      <td>姓名：</td>
+      <td><input type="text" name="username"  required/></td>
+    </tr>
+    <tr>
+      <td>家庭固定电话：</td>
+      <td><input type="tel" name="tel" required pattern="^\d{3,4}-\d{7,8}$" /></td>
+    </tr>
+    <tr>
+      <td>年龄：</td>
+      <td><input type="number" name="number" min="15" max="30" step="1"/></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><input type="submit" name="提交" /></td>
+    </tr>
+  </form>
+</table>
+</body>
+</html>

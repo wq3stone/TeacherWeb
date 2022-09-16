@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>函数的定义</title>
+</head>
+<body>
+<script type="text/javascript">
+var fnx=function(x1,x2) {
+	return x1+x2;
+};
+var fnxobj=new fnx();
+alert("fnxobj的类型是：" + typeof(fnxobj));
+alert("fnxobj是fnx的实例：" + (fnxobj instanceof fnx));
+alert("fnxobj是Object的实例：" + (fnxobj instanceof Object));
+</script>
+<p> <a href="funorig.html">普通函数</a> &nbsp;&nbsp; <a href="funobj.html">Function类的对象</a> &nbsp;&nbsp; <a href="funmethod.html">对象的方法</a> &nbsp;&nbsp; <a href="funclass.html">JS类</a></p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS 3</title>
+<style type="text/css">
+div {
+	width: 80px;
+	height: 50px;
+	background-color: #D3E2F5;
+	border: 1px solid black;
+	margin: 40px;
+	padding: 16px;
+}
+div#div1 {
+	transform: rotate(30deg);
+	-ms-transform: rotate(30deg); /* IE 9 */
+	-moz-transform: rotate(30deg); /* Firefox */
+	-webkit-transform: rotate(30deg); /* Safari and Chrome */
+	-o-transform: rotate(30deg); /* Opera */
+}
+div#div2 {
+	transform: skew(20deg, -10deg);
+	-ms-transform: skew(20deg, -10deg); /* IE 9 */
+	-moz-transform: skew(20deg, -10deg); /* Firefox */
+	-webkit-transform: skew(20deg, -10deg); /* Safari and Chrome */
+	-o-transform: skew(20deg, -10deg); /* Opera */
+}
+</style>
+</head>
+<body>
+<h3>CSS 3变形示例</h3>
+<div id="div1">旋转的div元素。</div>
+<div id="div2">倾斜的div元素。</div>
+</body>
+</html>

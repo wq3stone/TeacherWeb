@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>函数</title>
+<script type="text/javascript">
+function factor(num) {
+	if(num<=1) return 1;
+	else return num * factor(num-1); //递归调用
+}
+</script>
+</head>
+<body>
+<h3>函数的递归调用</h3>
+<script language="javascript">
+	document.write("12! = " + factor(12) + "<br/>");
+</script>
+<p> <a href="funapply1.html">函数示例1</a> &nbsp;&nbsp; <a href="funapply2.html">函数示例2</a></p>
+</body>
+</html>

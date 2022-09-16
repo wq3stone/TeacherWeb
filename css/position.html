@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>定位属性</title>
+<style type="text/css">
+.container {
+	border: 1px dashed black;
+	width: 400px; height: 200px;
+	/* position: relative; 为绝对定位的子元素作定位参考 */
+	margin: 32px;
+}
+p {
+	padding: 4px;
+	background-color: #D3E2F5;
+}
+.pos_abs {
+	position: absolute;
+	left: 10px; top: 32px;
+	z-index:10;
+}
+.pos_left {
+	position: relative;
+	left: -20px
+}
+.pos_right {
+	position: relative;
+	left: 20px
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <p class="pos_abs">绝对定位的文本</p>
+  <p>正常位置的文本</p>
+  <p class="pos_left">相对于其正常位置向左移动的文本</p>
+  <p class="pos_right">相对于其正常位置向右移动的文本</p>
+</div>
+</body>
+</html>

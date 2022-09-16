@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript变量</title>
+</head>
+<body>
+<h3>强制类型转换parseFloat()</h3>
+<script language="javascript">
+	 //转换结果1234
+	document.write("1234blue转换为小数值 = " + parseFloat("1234blue") + "<br/>");
+    document.write("空格转换为小数值 = " + parseInt("") + "<br/>"); //NaN
+    document.write("0xA转换为小数值 = " + parseFloat("0xA") + "<br/>"); //0
+    document.write("22.5转换为小数值 = " + parseFloat("22.5") + "<br/>"); //22.5
+    document.write("22.34.5转换为小数值 = " + parseFloat("22.34.5") + "<br/>"); //22.34
+    document.write("0908.5转换为小数值 = " + parseFloat("0908.5") + "<br/>"); //908.5	
+	document.write("true转换为小数值 = " + parseInt(true) + "<br/>"); //NaN
+	document.write("false转换为小数值 = " + parseInt(false) + "<br/>"); //NaN
+</script>
+<p> <a href="varscope.html">变量作用域</a> &nbsp;&nbsp; <a href="autoconvert.html">隐式转换</a> &nbsp;&nbsp; <a href="auto2str.html">隐式转换为String</a> &nbsp;&nbsp; <br /><a href="parseint.html">parseInt()</a> &nbsp;&nbsp; <a href="parsefloat.html">parseFloat()</a> &nbsp;&nbsp; <a href="stringmethod.html">String()</a> &nbsp;&nbsp; <a href="tostring.html">toString()</a></p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS 3</title>
+<style type="text/css">
+/* 定义普通的服务器字体 */
+@font-face {
+	font-family: ServerFont;
+	src: url("Delicious-Roman.otf") format("OpenType");
+}
+/* 定义粗体的服务器字体 */
+@font-face {
+	font-family: ServerFont;
+	src: url("Delicious-Bold.otf") format("OpenType");
+	font-weight: bold;
+}
+/* 定义斜体的服务器字体 */
+@font-face {
+	font-family: ServerFont;
+	src: url("Delicious-Italic.otf") format("OpenType");
+	font-style: italic;
+}
+/* 定义粗斜体的服务器字体 */
+@font-face {
+	font-family: ServerFont;
+	src: url("Delicious-BoldItalic.otf") format("OpenType");
+	font-style: italic;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<h3>服务器字体示例</h3>
+<div style="font-family:ServerFont;font-size:30pt"> 
+	临沂大学网址：Http://www.lyu.edu.cn/</div>
+<div style="font-family:ServerFont;font-size:30pt;font-weight:bold"> 
+	临沂大学网址：Http://www.lyu.edu.cn/</div>
+<div style="font-family:ServerFont;font-size:30pt;font-style:italic;"> 
+	临沂大学网址：Http://www.lyu.edu.cn/</div>
+<div style="font-family:ServerFont;font-size:30pt;font-weight:bold; 
+	font-style:italic;">临沂大学网址：Http://www.lyu.edu.cn/</div>
+</body>
+</html>

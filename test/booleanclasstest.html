@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<script type="text/javascript">
+	var a=new Boolean(true);
+	var b=2;
+	//var a=new String("Hello");
+	//var b="Hello2";
+	document.write("a的属性：" + a.constructor + "<br/>");
+	document.write("b的属性：" + b.constructor + "<br/>");
+	document.write("a的类型：" + typeof a + "<br/>");
+	document.write("b的类型：" + typeof b + "<br/>");
+	document.write("a是Boolean的实例：" + (a instanceof Boolean) + "<br/>");
+	document.write("b是Number的实例：" + (b instanceof Number) + "<br/>");
+	document.write("a是Object的实例：" + (a instanceof Object) + "<br/>");
+	document.write("b是Object的实例：" + (b instanceof Object) + "<br/>");
+	for(prop in a) {
+	  document.write("a." + prop + " = " + a[prop] + "<br/>");
+  }
+</script>
+<body>
+</body>
+</html>

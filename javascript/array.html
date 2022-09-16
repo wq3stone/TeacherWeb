@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>内置类</title>
+</head>
+<body>
+<h3>数组 Array</h3>
+<script type="text/javascript">
+	a1=[8,6,68,86,60,80,"OK"];
+	a2=new Array("Hello",1,18);
+	document.write("原数组a1的长度：" + a1.length + "<br/>");
+	document.write("原数组a1中的元素：" + a1 + "<br/>");
+	a1=a1.concat(100,16);
+	document.write("数组a1末尾填加元素：" + a1+ "<br/>");
+	a1=a1.concat(a2);
+	document.write("数组a1末尾附加a2：" + a1 + "<br/>");
+	document.write("删除数组a1末尾的元素：" + a1.pop() + "<br/>");
+	document.write("数组a1第7个元素后的所有元素：" + a1.slice(6) + "<br/>");
+	document.write("数组a1第7-10个元素：" + a1.slice(6,10) + "<br/>");
+	document.write("数组a1倒数第4个元素后的所有元素：" + a1.slice(-4) + "<br/>");
+	document.write("数组a1转换为元素以空格分隔的字符串：" + a1.join(" ") + "<br/>");
+	document.write("数组a1默认排序：" + a1.sort() + "<br/>");
+	a1=a1.sort(sortNumber);
+	document.write("数组a1按值排序：" + a1+ "<br/>");
+	document.write("数组a1倒序：" + a1.reverse() + "<br/>");
+	function sortNumber(a,b) {
+		return a - b
+	}
+</script>
+<p> <a href="array.html">Array</a> &nbsp;&nbsp; <a href="date.html">Date</a> &nbsp;&nbsp; <a href="math.html">Math</a> &nbsp;&nbsp; <a href="string.html">String</a></p>
+</body>
+</html>

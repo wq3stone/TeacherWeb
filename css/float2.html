@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>元素的浮动与对后续文本的影响</title>
+<style type="text/css">
+.container
+{
+	width:560px; height:220px;
+	border: 1px dashed #C0C0C0;	
+	line-height:1.4em; padding:4px;
+	background-color:#D3E2F5;
+}
+.floatbox
+{
+	float:left;
+	border:1px dashed #2A3F00;
+	width:160px;
+	height:90px;
+	background-color:#FAFAF1;
+	margin:4px;
+	padding:4px;
+}
+</style>
+</head>
+<body>
+<h3>浮动框的排列和下移卡住</h3>
+<div class="container">
+	<div class="floatbox" style="padding:8px 4px;float:right">浮动框1，内边距上下各大了4px。</div>
+    <div class="floatbox">浮动框2，浮动到前一个的后边。</div>
+    <div class="floatbox">浮动框3，容器宽度容纳不下，向下移动，但因浮动框1较高，将其“卡住”。</div>
+容器宽度容纳不下，向下移动，但因浮动框1较高，将其“卡住”。容器宽度容纳不下，向下移动，但因浮动框1较高，将其“卡住”。容器宽度容纳不下，向下移动，但因浮动框1较高，将其“卡住”。容器宽度容纳不下，向下移动，但因浮动框1较高，将其“卡住”。容器宽度容纳不下，向下移动，但因浮动框1较高，将其“卡住”。容器宽度容纳不下，向下移动，但因浮动框1较高，将其“卡住”。容器宽度容纳不下，向下移动，但因浮动框1较高，将其“卡住”。
+</div>
+
+
+
+<p> <a href="float.html">浮动1</a> &nbsp; <a href="float2.html">浮动2</a> &nbsp; <a href="float3.html">浮动3</a></p>
+</body>
+</html>

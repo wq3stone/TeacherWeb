@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript变量</title>
+</head>
+<body>
+<h3>强制类型转换parInt()</h3>
+<script language="javascript">
+	 //转换结果1234
+	document.write("1234blue转换为整数值 = " + parseInt("1234blue") + "<br/>");
+    document.write("空格转换为整数值 = " + parseInt("") + "<br/>"); //NaN
+	//10（按十六进制解析）
+    document.write("0xA转换为整数值 = " + parseInt("0xA") + "<br/>"); 
+    document.write("22.5转换为整数值 = " + parseInt("22.5") + "<br/>"); //22
+	//未定48（按八进制解析），或60（按十进制解析）
+    document.write("060转换为整数值 = " + parseInt("060") + "<br/>"); 
+	//80（0后有大于7的数字，按十进制解析）
+    document.write("080转换为整数值 = " + parseInt("080") + "<br/>"); 
+    document.write("80转换为整数值 = " + parseInt("80") + "<br/>"); //80
+	 //2（按二进制解析）
+    document.write("二进制10转换为整数值 = " + parseInt("10",2) + "<br/>");
+	 //8(按八进制解析)
+    document.write("八进制10转换为整数值 = " + parseInt("10",8) + "<br/>");
+	//10（按十进制解析）
+    document.write("十进制10转换为整数值 = " + parseInt("10",10) + "<br/>");
+	//16（按十六进制解析） 
+    document.write("十六进制10转换为整数值 = " + parseInt("10",16) + "<br/>"); 
+    document.write("AF转换为整数值 = " + parseInt("AF") + "<br/>"); //NaN
+    document.write("十六进制AF转换为整数值 = " + parseInt("AF",16) + "<br/>"); //175
+	document.write("true转换为整数值 = " + parseInt(true) + "<br/>"); //NaN
+	document.write("false转换为整数值 = " + parseInt(false) + "<br/>"); //NaN
+</script>
+<p> <a href="varscope.html">变量作用域</a> &nbsp;&nbsp; <a href="autoconvert.html">隐式转换</a> &nbsp;&nbsp; <a href="auto2str.html">隐式转换为String</a> &nbsp;&nbsp; <br /><a href="parseint.html">parseInt()</a> &nbsp;&nbsp; <a href="parsefloat.html">parseFloat()</a> &nbsp;&nbsp; <a href="stringmethod.html">String()</a> &nbsp;&nbsp; <a href="tostring.html">toString()</a></p>
+</body>
+</html>

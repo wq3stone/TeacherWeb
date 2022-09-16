@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>绘制圆弧</title>
+</head>
+<body>
+<h3> 绘制圆弧</h3>
+<canvas id="arc" width="200" height="140"
+	style="border:1px solid black"> </canvas>
+<script type="text/javascript">
+  var canvas = document.getElementById('arc');
+  var ctx = canvas.getContext('2d');
+	ctx.beginPath();	// 开始定义路径
+	ctx.moveTo(40,50);
+	ctx.arcTo(100,10,160,50,100);
+	ctx.lineTo(100,110);
+	ctx.closePath();	// 关闭路径
+	ctx.fillStyle = '#f00';	// 设置填充颜色
+	ctx.fill();	// 填充当前路径。
+</script>
+<p> <a href="drawCircle.html">绘制圆形</a> &nbsp;&nbsp; <a href="drawArc.html">绘制扇形</a></p>
+</body>
+</html>

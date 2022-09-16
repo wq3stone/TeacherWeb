@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>XML DOM应用</title>
+</head>
+<body>
+<table border="1" align="center">
+  <caption>
+  使用DOM显示XML文挡
+  </caption>
+  <tr>
+    <td>学号</td>
+    <td>姓名</td>
+    <td>性别</td>
+    <td>民族</td>
+    <td>籍贯</td>
+    <td>专业</td>
+  </tr>
+  <script type="text/javascript">
+	var xmlDoc=document.implementation.createDocument("","",null);//
+	xmlDoc.async=false;
+	xmlDoc.load("simplexml.xml");
+	var stuList=xmlDoc.getElementsByTagName("student");
+	for(var i=0; i<stuList.length; i++) {
+  		document.write("<tr>");
+  		var subList=stuList[i].childNodes;
+  		for(var j=0; j<subList.length; j++) {
+    		if(subList[j].nodeType==1) { 
+      			//document.write("<td>" + subList[j].childNodes[0].nodeValue + "</td>");//
+      			document.write("<td>" + subList[j].textContent + "</td>");//
+    		}
+  		}
+  		document.write("</tr>");
+ 	} 
+  </script>
+</table>
+</body>
+</html>

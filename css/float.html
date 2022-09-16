@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>元素的浮动与对后续文本的影响</title>
+<style type="text/css">
+.container
+{
+	width:504px; height:240px;
+	line-height:1.6em;
+	padding:24px;	
+	background-color:#CFF;
+}
+.floater1 
+{
+	float:left;
+	margin:12px 8px 2px 12px;
+	padding:2px;
+}
+.blocker1 {
+	/*width:200px; height:160px; */
+	background-color:#FFFBF0;
+	margin:2px;
+	padding:2px;
+}		
+</style>
+</head>
+<body>
+<div class="container">
+浮动元素行前的文本不受浮动的影响。<br/>
+<img class="floater1" src="images/verticalalignex.jpg"/>
+<div class="blocker1">浮动元素后的块元素会前移占居浮动元素原来的位置，但其内的文本受其影响，将环绕浮动元素。</div>
+浮动元素后的文本，及浮动元素正常显示行内的文本，都将受浮动元素的影响，环绕浮动元素显示，不论是无标记嵌套的匿名文本，还是在块级元素中的文本。实际上float属性的本质工作就是使文本环绕图像显示。
+</div>
+<p> <a href="float.html">浮动1</a> &nbsp; <a href="float2.html">浮动2</a> &nbsp; <a href="float3.html">浮动3</a></p>
+</body>
+</html>

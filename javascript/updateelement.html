@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript应用</title>
+<script type="text/javascript">
+function change() {
+  var row=document.getElementById("row").value;
+  row=parseInt(row);
+  if(isNaN(row)) {
+	  alert("您要修改的行必须是整数！");
+	  return false;
+  }
+  var cel=document.getElementById("cel").value;
+  cel=parseInt(cel);
+  if(isNaN(cel)) {
+	  alert("您要修改的列必须是整数！");
+	  return false;
+  }
+  var tb=document.getElementById("d");
+  if(row > tb.rows.length || cel > tb.rows[0].cells.length) {
+	  alert("要修改的单元格不在表格范围内！");
+	  return false;
+  }
+  tb.rows[row-1].cells[cel-1].innerHTML = 
+  	document.getElementById("celVal").value;
+}
+</script>
+</head>
+<body>
+<h3>修改网页元素示例</h3>
+    <label for="row">改变第</label>
+    <input name="row" type="text" id="row" value="1" size="8" />
+    行&nbsp;
+    <label for="cel">第</label>
+    <input name="cel" type="text" id="cel" value="1" size="8" />    
+    <label for="celVal">列的值为：</label>
+    <input name="celVal" type="text" id="celVal" />
+    <input type="button" name="chg" id="chg" value="改变" onclick="change()" />
+    <br />
+    <br />
+    <table border="1" id="d">
+      <caption>
+      表格编辑
+      </caption>
+      <tr>
+        <td>超文本标记语言 HTML</td>
+        <td>超文本标记语言版本5 HTML5</td>
+      </tr>
+      <tr>
+        <td>层叠样式表 CSS</td>
+        <td>层叠样式表版本3 CSS3</td>
+      </tr>
+      <tr>
+        <td>可扩展标记语言 XML</td>
+        <td>XML超文本标记语言 XHTML</td>
+      </tr>
+      <tr>
+        <td>JavaScript脚本语言</td>
+        <td>Web编辑工具 Dreamweaver</td>
+      </tr>
+    </table>
+    <p> <a href="addelement.html">增加HTML元素</a> &nbsp;&nbsp; <a href="updateelement.html">修改HTML元素</a> &nbsp;&nbsp; <a href="deleteelement.html">删除HTML元素</a></p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>函数的调用</title>
+</head>
+<body>
+<script type="text/javascript">
+	function AType(name)
+	{
+		this.name = name;
+		// 定义一个info方法
+		this.info = function()
+		{
+			alert("本对象名是：" + this.name);
+		}
+	}
+	var anobj = new AType("anobj's Name");
+	// 调用anobj对象的info方法
+	anobj.info();
+	var name = "An Property of window";
+	// 以window对象作为调用者来调用anobj对象的info方法
+	anobj.info.call(window);
+	//anobj.info.call(null);
+	//anobj.info.call();
+</script>
+<p> <a href="funcall.html">call调用</a> &nbsp;&nbsp; <a href="funapply.html">apply调用</a></p>
+</body>
+</html>

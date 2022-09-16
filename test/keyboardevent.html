@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript事件</title>
+<style type="text/css">
+#box1 {
+	background-color:#D3E2F5;
+	width:280px;
+	height:80px;
+	padding-top:35px;
+	text-align:center;
+	line-height:1.6;
+}
+</style>
+<script>
+function keydownmsg(obj,p2,evt) {
+	var keynum=evt.which;	
+	switch(keynum){  
+		case 37:  
+			obj.style.backgroundColor="#A8C6ED";  
+			break;  
+		case 38:  
+			obj.style.backgroundColor="#B2E0F9";  
+			break;  
+		case 39:  
+			obj.style.backgroundColor="#C1E2F0";  
+			break;  
+		case 40:  
+			obj.style.backgroundColor="#D3E2F5";  
+			break;  
+	}  
+}
+function keypressmsg(obj,evt) {
+	obj.innerHTML="按上下左右键改变div颜色";
+	for(p in evt) {
+	document.getElementById("box2").innerHTML += "event." + p + " = " + evt[p] + "<br/>";
+	}
+}
+function keyupmsg(evt) {
+	var keynum=evt.which;		
+	var keychar=String.fromCharCode(keynum);
+	alert(keychar + "键已被释放！");
+}
+</script>
+</head>
+<body>
+<h3>键盘事件处理</h3>
+<div id="box1" tabindex="0" onKeyDown="keydownmsg(this,'others',event)" 
+	onKeyPress="keypressmsg(this,event)" >
+请先按Tab键，或用鼠标点击，<br/>获得焦点，之后按键。
+</div>
+<div id="box2"></div>
+<script>
+    document.getElementById("box1").onkeyup=keyupmsg;
+</script>
+<p> <a href="muouseevent.html">鼠标事件</a> &nbsp;&nbsp; <a href="keyboardevent.html">键盘事件</a> &nbsp;&nbsp; <a href="bodyvent.html">页面事件</a> &nbsp;&nbsp; <a href="formvent.html">表单事件</a></p>
+</body>
+</html>

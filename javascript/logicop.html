@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<body>
+<h3>逻辑运算符</h3>
+<script type="text/ecmascript">
+document.write("!true = " + !true + "<br/>");  //结果为false
+document.write("true && false = " + (true && false) + "<br/>");  //结果为false
+document.write("true & false = " + (true & false) + "<br/>");  //位运算，结果为0
+document.write("true || false = " + (true || false) + "<br/>");  //结果为true
+document.write("true | false = " + (true | false) + "<br/>");  //位运算，结果为1
+document.write("true ^ true = " + (true ^ true) + "<br/>");  //位运算，结果为0
+var vcond = true; 
+vcond &= false; //位运算，vcond = vcond & flase ＝ 0;
+document.write("vcond &= false; vcond = " + vcond + "<br/>");  
+vcond = true; 
+vcond |= false; //位运算vcond = vcond | flase ＝ 1;
+document.write("vcond |=false; vcond = " + vcond + "<br/>");  
+vcond = true; 
+vcond ^= false; //位运算vcond = vcond ^ flase ＝ 1;
+document.write("vcond ^= false; vcond = " + vcond + "<br/>"); 
+//vcond &&= true; //不存在的复合赋值运算
+//vcond ||= true; //不存在的复合赋值运算
+document.write("8 && 6 = " + (8 && 6) + "<br/>");  //逻辑运算，第1个操作数为true，返回第2个操作数，结果为6
+document.write("8 & 6 = " + (8 & 6) + "<br/>");  //位运算，结果为0
+document.write("8 || 6 = " + (8 || 6) + "<br/>");  //逻辑运算，第1个操作数为true，返回第1个操作数，结果为8
+document.write("8 | 6 = " + (8 | 6) + "<br/>");  //位运算，结果为14
+document.write("!8 = " + (!8) + "<br/>");
+</script>
+<p> <a href="logicop.html">逻辑运算符</a> &nbsp; <a href="bitop.html">位运算符</a> &nbsp; <a href="condop.html">条件运算符</a> &nbsp; <a href="instanceof.html">instanceof运算符</a></p>
+</body>
+</html>

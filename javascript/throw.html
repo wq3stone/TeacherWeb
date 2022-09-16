@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>流程控制</title>
+</head>
+<body>
+<h3>异常抛出语句throw</h3>
+<script language="javascript">
+	function str2int(str) {	//自动抛出Error异常，无需声明
+		if(isFinite(str)) {
+			return parseInt(str);
+		} else {
+			throw new Error("参数无法转换为整数！");
+		}
+	}
+	try {
+		str2int("I can't be converted to integer! ");
+	} catch(e) {
+		alert("程序发生错误：" + e.message);
+		//document.write("程序发生错误：" + e.message + "<br/>");
+	}
+</script>
+<p> <a href="ifelse.html">条件语句</a> &nbsp; <a href="switch.html">分支语句</a> &nbsp;&nbsp; <a href="for.html">for循环</a> &nbsp;&nbsp; <a href="while.html">while循环</a> &nbsp;&nbsp; <a href="dowhile.html">do-while循环</a> &nbsp;&nbsp; <br />
+<a href="forinobj.html">for-in1</a> &nbsp;&nbsp; <a href="forinarr.html">for-in2</a> &nbsp;&nbsp;&nbsp; <a href="with.html">with语句</a> &nbsp;&nbsp; <a href="trycatch.html">异常捕获</a> &nbsp;&nbsp; <a href="throw.html">异常抛出</a></p>
+</body>
+</html>

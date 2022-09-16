@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript变量</title>
+<script language="javascript">
+	var gv1="全局变量";
+	function dispvar(param) {
+		document.write(param + " = " + eval(param) + "<br/>");
+	}
+</script>
+</head>
+<body>
+<h3>全局函数eval()</h3>
+<script language="javascript">
+	function vscptest() {
+		var x=16;
+		dispvar("gv1");
+		document.write("x + 18 = " + eval("x + 18") + "<br/>");
+	}	
+	vscptest();	
+</script>
+<p> <a href="typeof.html">typeof()</a> &nbsp;&nbsp; <a href="eval.html">eval()</a> &nbsp;&nbsp; <a href="isnan.html">isNaN()</a> &nbsp;&nbsp; <a href="isfinite.html">isFinite()</a></p>
+</body>
+</html>

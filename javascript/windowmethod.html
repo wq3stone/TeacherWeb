@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>浏览器对象</title>
+<script type="text/javascript">
+  function closewin() {
+	if(confirm("确认要关闭当前窗口吗？")) {
+		window.self.close();
+	}
+  }
+  var tm;
+  function dtprick() {
+	var dt2=new Date();
+	document.getElementById("second").value=dt2.toLocaleTimeString();
+  }
+  function startTime() {
+	//tm=setInterval("dtprick()",1000);
+	tm=setInterval(dtprick,1000);	
+  }
+  function stopTime() {
+	if(tm !=null) {
+		clearInterval(tm);	
+	}
+  }
+</script>
+</head>
+<body>
+<h2>window全局方法的应用</h2>
+<h3>显示对话框</h3>
+<script type="text/javascript">
+	var username=prompt("请输入姓名：", "刘德华");
+	document.write("<div>欢迎" + username + "光临本网站！在本网站你可以学到很多Web技术。</div>");
+</script>
+<br/>
+<button onClick="closewin();">关闭窗口</button>
+<h3>定时器应用</h3>
+<p>当前日期：&nbsp;<span id="date1"></span></p>
+<p>
+  <label for="second">当前时间：</label>
+  <input type="text" name="second" id="second" />
+</p>
+<p>
+  <input type="button" name="start" id="start" value="秒表计时" onclick="startTime()" />
+  <input type="button" name="stop" id="stop" value="停止计时" onclick="stopTime()" />
+</p>
+<script type="text/javascript">
+  var dt=new Date();
+  document.getElementById("date1").innerHTML=dt.toLocaleDateString();
+  document.getElementById("second").value=dt.toLocaleTimeString();
+</script>
+<h3>其它方法</h3>
+<button onClick="window.print();">打印网页</button>
+<button onClick="window.open('http://www.lyu.edu.cn', 'lyupage', 'width=750,height=464,toolbar=no,status=no,resizable=yes')">打开窗口</button>
+<p> <a href="windowobj.html">window对象浏览</a> &nbsp;&nbsp; <a href="windowprop.html">window对象属性</a> &nbsp;&nbsp; <a href="windowmethod.html">window对象方法</a> &nbsp;&nbsp; <br/><a href="documentobj.html">document对象</a> &nbsp;&nbsp; <a href="historymethod.html">history对象</a> &nbsp;&nbsp; <a href="locationmethod.html">location对象</a> &nbsp;&nbsp; <a href="navigatormethod.html">navigator对象</a></p>
+</body>
+</html>

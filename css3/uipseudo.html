@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS 3</title>
+<style type="text/css">
+td {
+	border: 1px solid black;
+	padding: 4px;
+}
+/* 为处于鼠标悬停状态的表格行定义CSS样式 */
+tr:hover {
+	background-color: #aaa;
+}
+/* 为处于激活状态的input元素定义CSS样式 */
+input:active {
+	background-color: blue;
+}
+/* 为得到焦点的任意元素定义CSS样式 */
+:focus {
+	text-decoration: underline;
+}
+/* 为可用的任意元素定义CSS样式 */
+:enabled {
+	font-family: "黑体";
+	font-weight: bold;
+	font-size: 14pt;
+}
+/* 为不可用的任意元素定义CSS样式 */
+:disabled {
+	font-family: "隶书";
+	font-size: 14pt;
+}
+/* 为处于勾选状态的任意元素定义CSS样式 */
+:checked {
+	outline: red solid 5px;
+}
+	/* 为页面打开时处于勾选状态的任意元素定义CSS样式 */
+	:default {
+ outline: #bbb solid 5px;
+}
+</style>
+</head>
+<body>
+<h3>UI元素状态伪类</h3>
+<table style="width:400px;border-collapse:collapse">
+  <tr>
+    <td>超文本标记语言 HTML</td>
+    <td>超文本标记语言版本5 HTML5</td>
+  </tr>
+  <tr>
+    <td>层叠样式表 CSS</td>
+    <td>层叠样式表版本3 CSS3</td>
+  </tr>
+  <tr>
+    <td>可扩展标记语言 XML</td>
+    <td>XML超文本标记语言 XHTML</td>
+  </tr>
+  <tr>
+    <td>JavaScript脚本语言</td>
+    <td>Web编辑工具 Dreamweaver</td>
+  </tr>
+</table>
+<br/>
+<br/>
+<form name="form1" method="post" action="act.asp">
+  <table cellpadding="4" cellspacing="4">
+    <tr>
+      <td width="380" valign="top"><fieldset>
+          <legend>基本信息</legend>
+          <label for="tx1">姓名：</label>
+          <input type="text" name="tx1" id="tx1" value="请填写姓名!">
+          <p>
+            <label>性别：
+              <input type="radio" name="gender" vlaue="male" checked>
+              男
+              <input type="radio" name="gender" vlaue="female">
+              女 </label>
+          </p>
+          <p>
+            <label>爱好：
+              <input type="checkbox" name="qualifer" vlaue="tcher" checked>
+              音乐
+              <input type="checkbox" name="qualifer" vlaue="tcher">
+              美术 </label>
+          </p>
+          <p>
+            <label for="choice">籍贯：</label>
+            <select name="choice" id="choice">
+              <option value="-1" selected>请选择</option>
+              <option value="x1">北京</option>
+              <option value="x2">济南</option>
+              <option value="x3">临沂</option>
+              <option value="x4">上海</option>
+            </select>
+          </p>
+          <p>
+            <input type="submit" value="提交">
+            <input type="reset" value="重设">
+          </p>
+        </fieldset></td>
+    </tr>
+  </table>
+</form>
+<p> <a href="strucpseudo.html">结构性伪类选择器</a> &nbsp;&nbsp; <a href="uipseudo.html">UI状态伪类选择器</a></p>
+</body>
+</html>
